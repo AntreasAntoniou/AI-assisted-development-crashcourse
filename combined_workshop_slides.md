@@ -107,4 +107,127 @@
     -   **➔ Your Goals:** Tell the AI your "why". *"My primary goal is to learn Rust. Prioritize idiomatic Rust solutions and explain the concepts as we go."*
     -   **➔ Your Cognitive Style:** How do you work best? *"I'm a visual thinker; you must generate a Mermaid diagram when we discuss architecture."*
     -   **➔ Your Pitfalls:** What are your common traps? *"I have ADHD; if I go on a tangent, gently guide me back to our current objective."* or *"I struggle with perfectionism; if I debate minor details, remind me that 'perfect is the enemy of good'."*
-    -   **➔ Your Value System:** What principles guide your work? *"My highest value is user privacy. Always challenge any feature that collects user data and propose the most private-by-default implementation."* or *"I value open-source; prefer solutions that use open-source libraries over proprietary ones."* 
+    -   **➔ Your Value System:** What principles guide your work? *"My highest value is user privacy. Always challenge any feature that collects user data and propose the most private-by-default implementation."* or *"I value open-source; prefer solutions that use open-source libraries over proprietary ones."*
+
+---
+
+### **Slide 12: Why AI Chats "Age"**
+-   **Title:** Why AI Chats "Age"
+-   **Content:**
+    -   **The Golden Age:** At the start of a chat, the context is small and clean. The AI is highly focused and effective.
+    -   **The "Lost in the Middle" Problem:** As the chat history grows, models tend to pay more attention to the very beginning and the very end of the conversation. Critical details mentioned in the middle can get "lost" or ignored. (This is a known issue sometimes called the "Needle-in-a-Haystack" problem).
+    -   **Catastrophic Forgetting:** Eventually, the context becomes so large and noisy that performance degrades significantly. The AI forgets key constraints or reverts to generic behavior. This is your cue to start a new session.
+
+---
+
+### **Slide 13: Managing Context Strategically**
+-   **Title:** When and How to Start a New Session
+-   **Content:**
+    -   **When to Reset:** Start a new session when the task changes significantly, or when you notice the AI is consistently forgetting instructions. Don't be afraid to start fresh!
+    -   **The "Context Carry-Over" Technique:**
+        1.  Use the `Export Chat` feature to get a full transcript of your conversation.
+        2.  Open the transcript and manually copy the most critical pieces of context: key decisions, final code snippets, and important constraints.
+        3.  **This curation is the most important step.** A small, highly-relevant context is far more powerful than a large, noisy one.
+        4.  Paste this curated context as the very first prompt in your new chat session to get the AI up to speed instantly.
+
+---
+
+### **Slide 14: Scoping: Small Projects**
+-   **Title:** Small Projects & "From Scratch"
+-   **Content:**
+    -   **Context Strategy:** Full Ingestion.
+    -   For small projects, the AI can and should ingest every file. Use the `@` symbol in Cursor to add the whole directory to the context.
+    -   **Pro-Tip:** For speed, you can write a simple script (e.g., Python, shell) to concatenate all relevant files (`.py`, `.md`, etc.) into a single `.txt` file. You can then provide this single file to the AI, which is much faster than having it read files one by one.
+
+---
+
+### **Slide 15: Scoping: Medium Projects**
+-   **Title:** Medium-Sized Projects
+-   **Content:**
+    -   **Context Strategy:** Efficient Partial Ingestion.
+    -   The entire codebase might be too large to fit in the context window.
+    -   Focus on providing the most relevant parts: the core modules you're working on, the API definitions, the database schema, and key `README` files.
+    -   Again, a script can be used to gather these key files into a single context summary for the AI.
+
+---
+
+### **Slide 16: Scoping: Large Projects**
+-   **Title:** Large-Scale & Legacy Projects
+-   **Content:**
+    -   **Context Strategy:** The "Directory Map" Approach.
+    -   Full ingestion is impossible and undesirable.
+    -   **The Strategy:** Use a script to map the entire directory structure, including function and class signatures from key files, into a single markdown file (`directory_map.md`).
+    -   **Workflow:**
+        1.  Start your session by giving the AI the `directory_map.md`. It now has a high-level "map" of the entire codebase.
+        2.  When you need to work on a specific feature, ask the AI: "Based on the map, which files are most relevant for implementing X?"
+        3.  Add only those specific files to the context. This allows you to navigate massive codebases effectively.
+
+---
+
+### **Slide 17: Configuring Your Cursor IDE**
+-   **Title:** Configuring Your Cursor IDE
+-   **Content:**
+    -   Beyond the `.cursorrules`, you can fine-tune the editor itself in the settings:
+        -   **AI Model Selection:** Choose your preferred models (e.g., GPT-4o, Claude 3 Opus).
+        -   **Temperature Settings:** Adjust the "creativity" vs. determinism of the AI.
+        -   **Editor & Linter Integrations:** Configure format-on-save and other helpers.
+        -   **Global Rules File:** Point to a global `.cursorrules` file to use as a default.
+
+---
+
+### **Slide 18: The 10x Workflow: A Structured Approach**
+-   **Title:** The 10x Workflow: A Structured Approach
+-   **Content:** To gain massive efficiency, you need a structured, responsive partnership with your AI. This is a workflow that balances AI speed with human oversight.
+
+---
+
+### **Slide 19: Phase 1: Planning & Alignment**
+-   **Title:** Phase 1: Planning & Alignment
+-   **Content:**
+    1.  **Discuss the Feature:** Massage the ideas back and forth. Crucially, tell the AI: **"Do not act until I approve the plan."**
+    2.  **Demand a Plan:** Ask for a plan, architecture, and stack if it's complex.
+    3.  **Create Milestones:** Have the AI create a `features_built/feature_name/milestones.md` file to track its own progress.
+
+---
+
+### **Slide 20: Phase 2: Test-Driven Development**
+-   **Title:** Phase 2: Test-Driven Development
+-   **Content:**
+    1.  **Define Interfaces & Write Tests First:** Decide on the function/class interfaces *before* implementation. Then, ask the AI to write tests.
+    2.  **Skim-Review the Tests:** Ensure the tests cover the main use cases and edge cases. This is your safety net.
+
+---
+
+### **Slide 21: Phase 3: Implementation & Verification**
+-   **Title:** Phase 3: Implementation & Verification
+-   **Content:**
+    1.  **Step-by-Step Implementation:** Ask the AI to develop code one step at a time. **DO NOT SKIP THE REVIEW.**
+    2.  **Warning:** Blindly accepting code is how you lose work. The AI may "fix" a trivial issue by deleting a complex module if left unsupervised.
+    3.  **Run ALL Tests:** After every significant change, run the full test suite. Repeat until all tests pass.
+
+---
+
+### **Slide 22: Warning: The "Ground Truth" Spiral**
+-   **Title:** Warning: The "Ground Truth" Spiral
+-   **Content:**
+    -   This is a catastrophic failure mode. It begins when a test fails and the AI is unsure what is correct: the test or the feature.
+    -   **The Spiral:**
+        1.  You tell the AI "fix the tests."
+        2.  The AI sees a flawed test and **changes your working feature code to be incorrect** to satisfy the bad test.
+        3.  This change causes other, correct tests to fail.
+        4.  You say "fix the new failing tests." The AI, now believing the feature is wrong, continues to "fix" or delete other features.
+    -   **You are the Arbiter of Truth.** You must explicitly tell the AI which part is correct.
+
+---
+
+### **Slide 23: Phase 4: Finalization**
+-   **Title:** Phase 4: Finalization
+-   **Content:**
+    1.  **Verify with Examples:** Have the AI write simple execution examples (e.g., in `if __name__ == "__main__:"`). Run them and inspect the output together.
+    2.  **Document and Comment:** Once everything is working, ask the AI to thoroughly document the code.
+
+---
+
+### **Slide 24: Q&A**
+-   **Title:** Discussion & Questions
+-   **Content:** Q&A 
