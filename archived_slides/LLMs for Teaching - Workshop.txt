@@ -1,0 +1,54 @@
+Large Language Model Tutors
+Pavlos Andreadis and Antreas Antoniou
+
+Motivation by example
+Tutorial as a text post.
+
+Motivation by example
+Tutorial as a media infused text post, with code blocks.
+
+Motivation by example
+Tutorial as a media infused text post, with code blocks you can chat with.
+
+Motivation by example
+Tutorial as a process of guided discovery via LLM customized to student’s background
+
+Motivation by example
+Tutorial as a process of guided discovery via LLM customized to student’s background and aware of student’s existing skills – especially those related to game, or, other such mechanics, to be used as a reference for analogues.
+
+Motivation by example
+Tutorial as a process of guided discovery via LLM customized to student’s background aware of student’s existing skills – especially those related to game, or, other such mechanics. Prompted by the student with their own ‘negative spiral tendencies’ (e.g. overthinking, procrastination etc), allowing the LLM to customize its interaction style to help the student.
+
+Motivation by example
+Tutorial as a process of guided discovery via LLM customized to student’s background aware of student’s existing skills – especially those related to game, or, other such mechanics. Prompted by the student with their own ‘negative spiral tendencies’ (e.g. overthinking, procrastination etc), allowing the LLM to customize its interaction style to help the student. While the LLM speaks in the style of your favourite fictional or real character, keeping you entertained and motivated.
+
+Example Use Case
+Example tutorial material: https://cs231n.github.io/optimization-2/, specifically the markdown in https://github.dev/cs231n/cs231n.github.io/tree/master/assets 
+Prompts and welcome messages used: https://github.com/AntreasAntoniou/LLMTutorsWorkshop
+LLM used: GPT4-Turbo (others can work well too)
+Interface: TypingMind (others can work well too)
+
+DEMO TIME 🚀🦾💪
+
+Ideas for uses of LLMs in teaching
+Customized Curriculum Design: Personalized Curriculum, Student-Centric, Unique Requirements.
+Efficient Course Material Creation: Streamlined Creation, AI Assistant, Enhanced Mentorship.
+AI-Assisted Mentorship: Expanded Guidance, Routine Management, Academic Development.
+
+Previous slides on LLM driving, pros, cons, model comparisons and hints and tips
+Visit: https://docs.google.com/presentation/d/13731VGDxIvvqy5A-2E-pEK2w8GgUTOzRAhPU8Qeffn0/edit#slide=id.g2cc2341b401_0_167
+
+
+How to Workshop
+Get access to an LLM. We recommend in this order:
+https://elm.edina.ac.uk/elm/elm
+https://console.groq.com/playground
+https://chatgpt.com
+Go to https://github.com/AntreasAntoniou/LLMTutorsWorkshop
+If you have your own problem, look at the prompts we offer and try to see if you can get your content in the prompts and running on an LLM. Please DO give us a shout so we can brain-storm together. 
+Personalize the type of student you want your LLM to support. You might consider unique and interesting learners, such as:
+A philosopher with no math background embarking on an AI master's degree. This offers a challenge of explaining complex AI algorithms and concepts in a philosophical context.
+A dolphin trainer pursuing a master's in AI. This unique scenario might require the LLM to relate AI topics using examples related to aquatic life, marine training methods, and more.
+A circus performer learning about AI. This requires creativity in using circus terminologies and scenarios to explain AI concepts.
+Personalize the kind of experience you want the student to have: Make it an RPG adventure with quests and rewards, or make it funny and entertaining, or perhaps, make it feel like a dialogue with a favourite fictional character.
+Try things out, iterate, talk to each other, and talk to us.

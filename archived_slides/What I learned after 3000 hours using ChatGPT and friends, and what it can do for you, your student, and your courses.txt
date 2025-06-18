@@ -1,0 +1,281 @@
+What I learned after 3000 hours using ChatGPT and friends, and what it can do for you, your student, and your courses
+Antreas Antoniou
+
+Talk Overview
+GPT4 and friends – Models I have used, pros and cons from my user perspective.
+Things I have used it for, what it worked well for, and what it did not work so well for.
+Tips and tricks to improve probability of useful application of the tools.
+Demos
+Suggested applications in academic context, with examples:
+Writing: Papers, Tutorials, Lecture Notes
+Teaching/Tutoring: Student individualization, find common ground with student, use it as a communication channel.
+Code writing: Copilot vs GPT4
+Material Comprehension and Delving Deeper 
+Intermediator in emotional situations / Communication advisor to understand another person
+Going Beyond - Opinionated/Experimental Section
+
+Links Slide
+ChatGPT - https://chat.openai.com
+Custom GPTs - https://chat.openai.com/gpts/editor
+University Edinburgh GPT4 for staff: https://elm.edina.ac.uk/elm/elm, 
+Gemini Pro/Ultra - https://gemini.google.com/app
+System prompts from me, used in this talk/tutorial: https://github.com/AntreasAntoniou/AwesomeGPTSystemPrompts
+Open source prompts and tips: https://github.com/f/awesome-chatgpt-prompts
+My favourite text to *something* stack:
+Generating images using text: https://ideogram.ai 
+Generating speech using text: https://elevenlabs.io
+Generating music using text/lyrics/style: https://www.udio.com, https://suno.com 
+
+A metric created for this talk …IIU (Intuitiveness, Informativeness, and Usefulness)
+"Intuitiveness"
+How naturally does the model interact?
+Can it understand and respond accurately?
+Take note: 'Intuition' in AI is about simulating understanding.
+"Informativeness"
+Does it provide detailed, relevant information?
+How dense is the value per token?
+Remember: Informative does not equal truthful.
+"Usefulness"
+Are the responses beneficial and actionable?
+Is the returned content aligned with the user's immediate needs?
+Caveat: Usefulness is subjective and context-dependent.
+Bottom line: IIU is a subjective metric, capturing my experience working with these tools.
+
+Models Used - Pros and Cons
+GPT 3.5 Turbo 15K: Extremely fast speed, IIU Rating of 4.0/10, High cost-effectiveness, Wide availability through General API.
+Gemini Pro: Similar performance to GPT 3.5 Turbo, accessible to all via gemini.google.com
+GPT 4 8K & Vision Variant: Fast speed (Moderate for Vision), IIU Rating of 7.5/10 (8.0/10 for Vision), Medium cost-effectiveness, Limited availability (API only).
+GPT 4 32K: Moderate speed, IIU Rating of 8.5/10, Low cost-effectiveness, Limited availability.
+GPT 4 Turbo 128K & Vision Variant: Extremely fast speed, IIU Rating of 6/10 (6.5/10 for Vision), High cost-effectiveness, Broad availability.
+Gemini Ultra: Comparable to GPT 4 128K but with 31K context, and built in search, Paid membership.
+
+Most of my experience is hence on …
+GPT4 8K (sometimes with Vision)
+GPT4 32K - when more context awareness is key to a task
+GPT 4 Turbo 128K - For less professional tasks
+Gemini Ultra: Used more recently, and found to perform comparatively to 1, but have less than 50 hours on it.
+
+Now for a quick summary and some inspiration ..
+
+Some Inspiration: Success Stories of What I tried
+Writing:
+Story crafting, anchoring with my prewritten paragraphs.
+Used as a partner for narrative/story discussions.
+Writing lyrics and poems.
+Academic paper writing and reviewing partner.
+Board Games:
+Augmented experience by generating contextual scenarios, characters, and dialogues.
+
+Writing:
+Story crafting leverages GPT-4, anchoring with my prewritten paragraphs.
+Used as a partner for narrative/story discussions.
+Writing lyrics and poems.
+Academic paper writing and reviewing enhanced
+
+Creative Writing: I set the overall scope, start off the writing with a long paragraph, and then offer key points as to how the story should move, key sentences that I want to appear. I generate 5 samples of next paragraph, choose which one I like, edit it, ask GPT for specific nuance that needs to be captured. Generate 5 more samples, and once I feel it’s good enough I move on.
+Discussing narrative/story - Writing partner
+Writing Lyrics and Poems
+Discussing philosophy, have it represent various stances, exploring space of perspectives
+Coding: Working on up to 100 lines of code, writing classes, methods, discussing alternatives, improving efficiency.
+Coding: Documentation, and comments
+Coding: Larger code file, making large scale changes
+Coding: Whole repo coding, making evern larger scale changes
+Augmenting board games: Generate unique/random scenarios, characters, dialogue, given context
+Mental Health: Used it to remind me, or suggest empirically proven methods for various challenges – used as means to train myself respond more skillfully to various situations, both emotionally and behaviorally.
+Paper writing/reviewing: Use it as a partner to discuss paper writing/reviews, have it generate its own reviews, then show it mine, discuss, or show it the written paper/section, discuss pros/cons etc.
+Teaching: Designing individual-customized course materials, and overall course syllabus/progression system. Sometimes using concepts familiar to the students like game systems, DnD systems, fantasy magic systems, to draw parallels to what is being taught. Create customized GPTs that speak in certain encouraging way, or speak like a favourite character, or try to keep morale up and teach the student how to navigate a problem solving task.
+Self-teaching: Make new concepts intuitive, by offering concepts I know, and it using them to explain something new. ‘Speaks my language’.
+Use as a mediator in navigating sensitive conversations, or understanding someone else’s perspective. Training myself to respond better to that.
+
+
+Success Stories of What I tried
+Philosophical Dialogues:
+Explored various philosophical ideas, by offering thesis, antithesis and synthesis of perspectives.
+Perspective coverage via ‘personality’ simulation and interactions thereof
+Coding:
+Effective in tasks with up to 100 lines of code, contributing to classes, methods, alternatives, and efficiency.
+Useful for crafting code documentation and comments.
+Philosophical Dialogues:
+Explored various philosophical ideas, by offering thesis, antithesis and synthesis of perspectives. Generated lots of perspectives each from a different ‘personality/stance’ to stimulate discussion.
+Coding:
+Effective in tasks with up to 100 lines of code, contributing to classes, methods, alternatives, and efficiency.
+Useful for crafting code documentation and comments.
+
+
+Success Stories of What I tried
+Mental Health:
+Handled reminders and suggestions, suggesting proven methods for emotional and behavioral challenges.
+Mediation:
+Facilitated better navigation and understanding of sensitive conversations.
+Acted as a translation layer during emotionally charged conversations/situations, helping both parties communicate.
+Creative Writing: I set the overall scope, start off the writing with a long paragraph, and then offer key points as to how the story should move, key sentences that I want to appear. I generate 5 samples of next paragraph, choose which one I like, edit it, ask GPT for specific nuance that needs to be captured. Generate 5 more samples, and once I feel it’s good enough I move on.
+Discussing narrative/story - Writing partner
+Writing Lyrics and Poems
+Discussing philosophy, have it represent various stances, exploring space of perspectives
+Coding: Working on up to 100 lines of code, writing classes, methods, discussing alternatives, improving efficiency.
+Coding: Documentation, and comments
+Coding: Larger code file, making large scale changes
+Coding: Whole repo coding, making evern larger scale changes
+Augmenting board games: Generate unique/random scenarios, characters, dialogue, given context
+Mental Health: Used it to remind me, or suggest empirically proven methods for various challenges – used as means to train myself respond more skillfully to various situations, both emotionally and behaviorally.
+Paper writing/reviewing: Use it as a partner to discuss paper writing/reviews, have it generate its own reviews, then show it mine, discuss, or show it the written paper/section, discuss pros/cons etc.
+Teaching: Designing individual-customized course materials, and overall course syllabus/progression system. Sometimes using concepts familiar to the students like game systems, DnD systems, fantasy magic systems, to draw parallels to what is being taught. Create customized GPTs that speak in certain encouraging way, or speak like a favourite character, or try to keep morale up and teach the student how to navigate a problem solving task.
+Self-teaching: Make new concepts intuitive, by offering concepts I know, and it using them to explain something new. ‘Speaks my language’.
+Use as a mediator in navigating sensitive conversations, or understanding someone else’s perspective. Training myself to respond better to that.
+
+
+Success Stories of What I tried
+Education:
+Designed customized course materials and syllabus using relatable concepts for specific students, with specific background, circumstances and passions.
+‘Speaks my language' approach helped make new concepts intuitive for efficient self-learning.
+Created customized GPTs that encourage and guide students in problem-solving tasks.
+
+Creative Writing: I set the overall scope, start off the writing with a long paragraph, and then offer key points as to how the story should move, key sentences that I want to appear. I generate 5 samples of next paragraph, choose which one I like, edit it, ask GPT for specific nuance that needs to be captured. Generate 5 more samples, and once I feel it’s good enough I move on.
+Discussing narrative/story - Writing partner
+Writing Lyrics and Poems
+Discussing philosophy, have it represent various stances, exploring space of perspectives
+Coding: Working on up to 100 lines of code, writing classes, methods, discussing alternatives, improving efficiency.
+Coding: Documentation, and comments
+Coding: Larger code file, making large scale changes
+Coding: Whole repo coding, making evern larger scale changes
+Augmenting board games: Generate unique/random scenarios, characters, dialogue, given context
+Mental Health: Used it to remind me, or suggest empirically proven methods for various challenges – used as means to train myself respond more skillfully to various situations, both emotionally and behaviorally.
+Paper writing/reviewing: Use it as a partner to discuss paper writing/reviews, have it generate its own reviews, then show it mine, discuss, or show it the written paper/section, discuss pros/cons etc.
+Teaching: Designing individual-customized course materials, and overall course syllabus/progression system. Sometimes using concepts familiar to the students like game systems, DnD systems, fantasy magic systems, to draw parallels to what is being taught. Create customized GPTs that speak in certain encouraging way, or speak like a favourite character, or try to keep morale up and teach the student how to navigate a problem solving task.
+Self-teaching: Make new concepts intuitive, by offering concepts I know, and it using them to explain something new. ‘Speaks my language’.
+Use as a mediator in navigating sensitive conversations, or understanding someone else’s perspective. Training myself to respond better to that.
+
+
+Problems I encountered
+Forgetfulness: Tends to forget or lose track of the context at times, requiring frequent reminders of earlier content.
+Varying Competence
+Large-Scale Coding
+‘Placeholder’ Coding: GPT-4 seems to sometimes fall into a state of offering placeholders and pseudocode, and won’t write the code you request.
+Coherence over longer context (2K +)
+Most responses are 90% ‘ready to go’, but skip the ‘human supervision’ and it can lead to that 10% leaking out as incompetence 
+– It’s an incredible tool, but it is still a tool. You, the human, are the driver, and must ‘manage’ the tool, and take responsibility for its outputs. 
+Forgetfulness: GPT-4 tends to forget or lose track of the context at times, requiring frequent reminders of earlier content.
+Varying Competence: GPT-4's capability can be inconsistent, ranging from genius/insightful to seemingly "dumb", which can disrupt smooth operation.
+Large-Scale Coding: GPT-4 struggled with large-scale modifications, such as reorganizing whole repositories, or even just large code files.
+‘Placeholder’ Coding: GPT-4 seems to sometimes fall into a state of offering placeholders and pseudocode, and won’t write the code you request.
+Coherence over longer context: In stories, conversations, lyrics, code after say 2K tokens of so, it becomes clear that coherence is lackluster sometimes.
+While a great information source, and even a skill-training source, for mental health and interpersonal matters. A human touch is necessary to ensure it’s going the right way.
+– It’s an incredible tool, but it is still a tool. You, the human, are the driver, and must ‘manage’ the tool, and take responsibility for its outputs. 
+
+
+Tips and tricks to improve probability of useful application of the tools
+Dealing with these systems is a bit like cooking. The below form my current best recipe. But take with a grain of salt, and adapt based on context.
+Detailed Instructions: Create detailed, specific instructions for each use scenario, what to do and what not to.
+Collaboration with AI: View AI as a collaborator, correcting and guiding it as necessary.
+Mind Your Phrasing: Tone and style influence AI responses. Make your requests accordingly.
+Iteration is Key: Enhancing efficiency may require trial and error. Be patient and willing to adjust.
+Employ Meta-Prompting: Improve performance by thinking a layer above. Ask the AI about the best way to phrase a task.
+
+Dealing with these systems is a bit like cooking. The below form my current best recipe. But take with a grain of salt, and adapt based on context.
+The “System Instruction Prompt” – You should write in here, in high detail what you want your agent to know, do, not do, during any and all interactions. You should probably craft this using a tool like GPT4, and you should have one for each scenario in which you want to use GPT4.
+Treat it as a collaboration and a conversation at all times. The agent will try to be helpful, and it will be good enough, or awesome, in many things, but will also get some others terrible or unacceptable. Tell it about it when it does, and help steer it to what you need. – Tis all about the dance.
+The way you phrase your queries matters. Your tone, style, stance will change the way it responds. It was trained on human data. Humans respond differently to tone, style, stance etc. It will be imitating that. 
+Remember that the process of achieving the 3-5x efficiency improvement at a given task can be a bit of a ‘mining’ process. You will need to add ingredients, stir, and then try stirring differently with new ingredients if it doesn’t work. Sometimes you just get bad RNG too!
+If you don’t know how you get the tool to do what you want - ASK IT how you can get it to do what you want! 
+You will notice that often one of the most powerful mental models for this is a ‘meta’ one. You can almost always improve the tools performance by thinking a layer above and asking it how you can ask it to do what you want it to do.
+
+
+System Instruction Prompt Tips
+Demo time
+https://github.com/AntreasAntoniou/AwesomeGPTSystemPrompts
+And 
+https://elm.edina.ac.uk/elm/elm
+Or
+https://chat.openai.com/
+
+
+Coding: Copilot Vs ChatGPT4
+Tips:
+Use comments as the means to prompt Copilot
+Copilot is aware of the whole file, and is biased towards recent code, use this to achieve what you need
+Copilot offers a chat interface, docstring generation etc. 
+Copilot chat is more limited than ChatGPT4
+Use ChatGPT4 to discuss software architecture, efficiency, write longer code segments
+Use Copilot for quick, in-place coding, docstrings, and chat-based method/class generation
+
+Coding: Copilot Vs ChatGPT4
+Demo time
+
+Suggested Applications in Academic Setting
+For Your Students:
+AI-Assisted Mentorship: Guidance, Critical Thinking, AI-Stimulated Learning.
+Guided Discovery: Instruction Prompts, Concept Unraveling, Problem-Solving.
+Concept Explanation: Known References, Tangible Learning, Relatable Concepts.
+Language Tailoring: Linguistic Style, Morale Boost, Enhanced Motivation.
+Communication Advisor: Emotional Navigation, Improved Understanding, Perspective Synthesis.
+Coding Assistance: Coding Guidance, Error Troubleshooting, Problem-Solving Reinforcement.
+
+AI-Assisted Mentorship: GPT-4 offers a unique form of mentorship, providing guidance through complicated concepts, stimulating critical thinking, inspiring resilience, and offering resources in line with student interests and career aspirations. It ensures a balance between AI-driven solutions and independent efforts, promoting genuine learning.
+Guided Discovery: With well-crafted instruction prompts, GPT-4 helps students unravel core concepts or learn problem-solving skills by offering the right hints or thought guidance.
+Concept Explanation Through Known References: GPT-4 can explain new academic concepts using references from well-understood subjects, such as JRPG mechanics, to make learning more relatable and tangible for students.
+Language Tailoring for Motivation: GPT-4 can be tailored to mimic the linguistic style of a loved and inspiring character, fostering an environment that boosts student morale and enhances motivation.
+Communication Advisor: GPT-4 assists in effectively navigating emotionally charged academic situations, fostering a better understanding of differing perspectives.
+Balanced Coding Assistance: GPT-4 can aid students in learning to code by clarifying concepts and troubleshooting errors. It's not to automate their tasks, but to reinforce their learning and foster problem-solving capabilities.
+
+
+Suggested Applications in Academic Setting
+For the Teacher:
+Customized Curriculum Design: Personalized Curriculum, Student-Centric, Unique Requirements.
+Efficient Course Material Creation: Streamlined Creation, AI Assistant, Enhanced Mentorship.
+AI-Assisted Mentorship: Expanded Guidance, Routine Management, Academic Development.
+Customized Curriculum Design: GPT-4 can design personalized curriculum and teaching materials catering to specific student groups considering their backgrounds, learning styles, and unique requirements.
+Efficient Course Material Creation: GPT-4 can help teachers create course materials more efficiently. It can also act as a personalized AI assistant for students, answering many of their questions and freeing up time for the teacher to focus on mentorship.
+AI-Assisted Mentorship: GPT-4 can extend teachers' capacity to guide and coach students one on one. By handling the more routine aspects of instruction, GPT-4 allows teachers to focus more on the mentorship aspect of their role, guiding students in their overall personal and academic development.
+
+
+Suggested Applications in Academic Setting
+For the researcher:
+Writing Aid: Academic Writing, Structured Feedback, Enhanced Structure
+Coding Support: Code Writing/Reviewing, Alternative Solutions
+Research Guide: Literature Reviews, Gap Identification, New Directions
+Proposal Formulation: Research Proposals, Clarity, Guideline Adherence
+
+For the researcher:
+Writing Aid: GPT-4 assists with academic writing, offering feedback and enhancing structure.
+Coding Support: GPT-4 helps write and review code, suggesting alternative approaches and solutions.
+Research Guide: GPT-4 contributes to literature reviews, identifies gaps in research, and recommends new directions.
+Proposal Formulation: GPT-4 aids in developing research proposals, focusing on clarity, coherence, and guideline adherence.
+
+
+And now for the more opinionated and experimental part
+
+The Double-Edged Sword of AI Systems in University Education
+Potential Misuse: Risk of Overreliance, Impact on Effort, Threat to Academic Integrity.
+Expanded Learning Resource: High-Quality Examples, Self-Learning, Equal Access.
+Guided Mentorship vs Independent Effort: Balance, Complex Problem-Solving, Necessary Discussion.
+1. Potential Misuse: There's a potential risk of students overly relying on AI systems, such as using them to automate their coursework and assignments. This might reduce students' individual effort and learning initiative, potentially impacting their holistic development, and academic integrity.
+2. Expanded Learning Resource: Conversely, exposure to high-quality writing and code examples via AI systems can be an invaluable self-learning resource, especially for students who do not have equal access to such resources.
+3. Guided Mentorship vs Independent Effort: While AI could guide students in learning, writing and solving complex problems, striking a balance between independent effort and guided mentorship is crucial. How to achieve this is a discussion worth having.
+
+
+ Teacher's Role: Beyond Education to Mentorship
+Holistic Development: Foster Growth, Critical Thinking, Lifelong Learning.
+Inspiring Resilience and Ethical Conduct: Stimulate Resilience, Encourage Ethics, Enhance Life Skills.
+Preparing for the World Beyond Classrooms: Well-Rounded Individuals, Workforce Readiness, Life Challenges.
+The Shortfall of Absence of Mentorship: Risks of Information Transfer, Missing Deeper Contexts, Need for Transformative Education.
+1. Holistic Development:  Teachers as mentors are key to fostering personal and professional growth, guiding students towards critical thinking, problem-solving, and a lifelong passion for learning.
+2. Inspiring Resilience and Ethical Conduct: A mentor-teacher stimulates resilience and ethics. They inspire students to explore self, deal with challenges, and gain life skills necessary for societal interaction.
+3. Preparing for the World Beyond Classrooms: This mentorship aspect is vital for shaping well-rounded individuals who are ready to successfully navigate the workforce and broader life challenges.
+4. The Shortfall of Absence of Mentorship: Without mentorship, teaching risks becoming merely a transfer of information, missing the deeper contexts and enriching experiences that make education truly transformative and beneficial.
+
+
+Maximizing Mentorship through AI Systems 
+Freeing Up Teachers' Time: Task Automation, Content Personalization, Enhanced Mentorship.
+AI-Driven Mentorship: Custom Guidance, Concept Simplification, Interest-Aligned Resources.
+1. Freeing Up Teachers' Time: AI can handle many time-consuming administrative tasks and provide personalized content and student support. This would liberate teachers, permitting them to focus more on mentorship and individual student guidance.
+2. AI-Driven Mentorship: With tailored guidance and inputs from teachers, AI systems can serve to provide personalized mentoring. For instance, they could offer customized advice, guide students through complicated concepts or provide resources aligning with students' interests and career aspirations. This simultaneously bolsters the teachers' mentorship efforts, providing an additional layer of guidance enhancing students' experience.
+
+
+Navigating the AI Integration in Education
+Human and AI Synergy: Supplement Teachers, Enriched Learning, Balance AI and Human Mentorship.
+Transparent AI Usage Practices: Ethical Usage, Data Privacy, Transparency, Foster Open Dialogues between University, Teachers and Students
+1. Human and AI Synergy: With the right usage, AI systems could not only supplement teachers' efforts but could also foster a enriching teaching and learning milieu. The goal is to strike a balance between AI-driven techniques and human mentorship, enhancing the learning experience. 
+2. Transparent AI Usage Practices: The adoption of AI in education necessitates a clear policy around its ethical usage, data privacy, and transparency. It's important for academic institutions to foster open dialogues about these policies, ensuring they align with the concerns and expectations of both the faculty and students.
+
+
+Discussion and Q/A
