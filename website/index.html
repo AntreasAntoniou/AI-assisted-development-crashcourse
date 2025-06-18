@@ -37,76 +37,81 @@
 <body>
     <div id="particles-js"></div>
     <div class="slide-container">
-        <!-- Slide 1: Title -->
+        <!-- Slide 1: Title Slide -->
         <div class="slide active">
-            <h1 class="text-6xl font-bold gradient-text" contenteditable="true">AI-Assisted Development</h1>
+            <h1 class="text-6xl font-bold gradient-text" contenteditable="true">AI-Assisted Development: A Crash Course</h1>
             <p class="text-3xl mt-4 text-gray-300" contenteditable="true">From Prompting Fundamentals to Advanced Persona-Driven Workflows</p>
+            <p class="text-xl mt-8 text-gray-400" contenteditable="true">Antreas Antoniou</p>
         </div>
 
         <!-- Slide 2: The Modern AI Toolbox -->
         <div class="slide">
-            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">The Modern AI Toolbox</h2>
-            <div class="content-box text-2xl space-y-6">
-                <p contenteditable="true"><strong>Codex (OpenAI):</strong> The foundational model, now significantly revamped, that powers the latest generation of GitHub Copilot. The OG of code generation.</p>
-                <p contenteditable="true"><strong>Claude Code (Anthropic):</strong> A new, powerful coding assistant known for its large context window and strong reasoning abilities. Excellent for complex logic and documentation.</p>
-                <p contenteditable="true"><strong>Cursor:</strong> An "AI-first" code editor built for deep AI collaboration. Our focus for today.</p>
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Introduction to the Players</h2>
+            <div class="content-box text-2xl space-y-6 text-left">
+                <p contenteditable="true">Today we'll focus on <strong>Cursor</strong>, an "AI-first" code editor built for deep AI collaboration.</p>
+                <p contenteditable="true">But it's helpful to know the other major players:</p>
+                <ul class="list-disc list-inside mt-4 space-y-4 text-xl">
+                    <li contenteditable="true"><strong>Codex Suite (OpenAI):</strong> Not just a single model, but a suite of tools. This includes a powerful cloud-based agent for tackling large tasks and the open-source <strong>Codex CLI</strong> for pairing with a lightweight agent in your terminal. <a href="https://openai.com/codex" target="_blank" class="text-yellow-400 hover:underline">Source</a>, <a href="https://github.com/openai/codex" target="_blank" class="text-yellow-400 hover:underline">GitHub</a></li>
+                    <li contenteditable="true"><strong>Claude Code (Anthropic):</strong> A powerful CLI collaborator you install directly into your terminal. It uses agentic search to understand your entire codebase and can handle entire workflows from issue to PR. <a href="https://www.anthropic.com/claude-code" target="_blank" class="text-yellow-400 hover:underline">Source</a></li>
+                </ul>
             </div>
         </div>
 
-        <!-- Slide 3: Why Cursor? -->
+        <!-- Slide 3: Our Focus: Cursor -->
         <div class="slide">
-            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Why Focus on Cursor?</h2>
-            <div class="content-box text-3xl space-y-4">
-                <p contenteditable="true">Cursor treats the AI as a genuine collaborator that can be taught and molded.</p>
-                <p class="mt-6 p-4 bg-yellow-900/30 border-l-4 border-yellow-400 rounded" contenteditable="true">The core of this is the <code>.cursorrules</code> file, which allows us to create persistent, persona-driven assistants.</p>
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Why Cursor for This Tutorial?</h2>
+            <div class="content-box text-2xl space-y-4">
+                <p contenteditable="true">While other tools are powerful, Cursor is unique in its focus on a <strong>deep, project-aware, and configurable</strong> AI partnership.</p>
+                <p contenteditable="true">It treats the AI not as a command-line tool, but as a genuine collaborator that can be taught and molded.</p>
+                <p class="mt-6 p-4 bg-yellow-900/30 border-l-4 border-yellow-400 rounded" contenteditable="true">The core of this is the <code>.cursorrules</code> file, which allows us to move beyond simple prompting into creating persistent, persona-driven assistants. This is what we'll be mastering today.</p>
             </div>
         </div>
 
         <!-- Slide 4: The Art of the Prompt -->
         <div class="slide">
-            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">The Art of the Prompt</h2>
-            <ul class="text-2xl space-y-4 content-box">
-                <li contenteditable="true"><strong>Specificity is Key:</strong> Vague questions get vague answers. Provide details, examples, and constraints.</li>
-                <li contenteditable="true"><strong>Provide Context:</strong> Give the AI the surrounding code, the error message, and your ultimate goal.</li>
-                <li contenteditable="true"><strong>Assume a Persona:</strong> Tell the AI *who* it should be. "You are a senior Python developer..."</li>
-                <li contenteditable="true"><strong>Iterate and Refine:</strong> Treat prompting as a conversation. Your first prompt is rarely your last.</li>
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Principles of Effective Prompting</h2>
+            <ul class="text-2xl space-y-4 content-box text-left">
+                <li contenteditable="true"><strong>Specificity is Key:</strong> Vague questions get vague answers. Provide details, examples, and constraints. Instead of "write a function," say "write a Python function named <code>calculate_average</code> that takes a list of numbers and returns a float."</li>
+                <li contenteditable="true"><strong>Provide Context:</strong> The AI doesn't know what you know. Give it the surrounding code, the error message, the goal you're trying to achieve.</li>
+                <li contenteditable="true"><strong>Assume a Persona:</strong> Tell the AI <em>who</em> it should be. "You are a senior Python developer specializing in performance." This primes the model to respond in a certain style and with a certain level of expertise.</li>
+                <li contenteditable="true"><strong>Iterate and Refine:</strong> Your first prompt is rarely your best. Treat prompting as a conversation. Refine your request based on the AI's response.</li>
             </ul>
         </div>
-        
+
         <!-- Slide 5: LLM Psychology & Intuition -->
         <div class="slide">
-            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">LLM Psychology & Intuition</h2>
-            <div class="content-box text-2xl space-y-4">
-                <p contenteditable="true">An LLM is a prediction engine, not a thinking one. But because it's trained on human text, it responds to human-like interaction. This is where intuition comes in.</p>
-                <p class="mt-4" contenteditable="true"><strong>Finding the Vibe:</strong> Think of it like tuning a radio or finding a dance partner. You're trying to find the "frequency" of the desired response. This context includes more than just a persona:</p>
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">How LLMs "Think": A Practical Mental Model</h2>
+            <div class="content-box text-2xl space-y-4 text-left">
+                <p contenteditable="true"><strong>It's All Statistics:</strong> An LLM isn't thinking; it's a powerful next-token prediction engine. Its goal is to find the most statistically likely response based on the massive amount of text and code it was trained on.</p>
+                <p contenteditable="true"><strong>Simulated Understanding:</strong> The "understanding" you perceive is an emergent property of these patterns. This is why psychological cues work. By providing context, you guide the model toward a better statistical neighborhood.</p>
+                <p class="mt-4" contenteditable="true"><strong>Finding the Vibe (The Art of Context):</strong> Think of it like tuning a radio or finding a dance partner. Your goal is to provide the perfect context to lead the AI to the right answer. This includes:</p>
                 <ul class="text-xl space-y-2 mt-2 list-disc list-inside">
                     <li contenteditable="true">The right code snippets.</li>
                     <li contenteditable="true">A clear instruction and goal.</li>
                     <li contenteditable="true">A specific persona or role.</li>
                     <li contenteditable="true">Examples of the desired output.</li>
                 </ul>
-                <p class="mt-2" contenteditable="true">By providing this rich context, you are "leading the dance," making it easy for your AI partner to follow.</p>
             </div>
         </div>
 
         <!-- Slide 6: Pro-Level Tips & Tricks -->
         <div class="slide">
-            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Pro-Level Tips & Tricks</h2>
-            <ul class="text-2xl space-y-6 content-box">
-                <li contenteditable="true"><strong>Meta-Prompting:</strong> If you don't know how to ask, ask the AI! "How should I prompt you to get a well-structured FastAPI endpoint?"</li>
-                <li contenteditable="true"><strong>The "Unstuck" Protocol:</strong> When frustrated, narrate your problem to the AI. "I'm stuck because this error is confusing. My goal is X. Here's my code. Help me." This provides incredible context for the model.</li>
-                <li contenteditable="true"><strong>Crafting Context:</strong> The best context includes the code, the goal, and the desired output format.</li>
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Unlocking Your Assistant's Potential</h2>
+            <ul class="text-2xl space-y-6 content-box text-left">
+                <li contenteditable="true"><strong>Meta-Prompting:</strong> When you don't know how to ask for something, ask the AI! "How should I prompt you to get a well-structured, documented FastAPI endpoint?"</li>
+                <li contenteditable="true"><strong>The "Unstuck" Protocol:</strong> When you feel stuck or frustrated, <strong>just tell the AI why.</strong> Describe your confusion, your goal, and your current obstacle. "I'm stuck because this error message is confusing. My goal is X. Here is my code. Can you help me understand the problem and suggest a path forward?" This provides incredible context.</li>
+                <li contenteditable="true"><strong>Crafting Context:</strong> The best context includes not just the code, but also the goal, the constraints, and the desired output format.</li>
             </ul>
         </div>
 
-        <!-- Slide 7: The .cursorrules File -->
+        <!-- Slide 7: Global vs. Project Rules: A Strategy -->
         <div class="slide">
             <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Global vs. Project Rules: A Strategy</h2>
-            <p class="text-2xl max-w-4xl mb-6" contenteditable="true">Both rule sets are critical for efficiency. The key is to layer them correctly.</p>
+            <p class="text-2xl max-w-4xl mb-6 text-center" contenteditable="true">Both rule sets are critical for efficiency. The key is to layer them correctly.</p>
             <div class="flex gap-8 text-left">
                 <div class="p-6 bg-gray-800 rounded-lg">
                     <h3 class="text-2xl font-bold mb-2" contenteditable="true">Global Rules (User Settings)</h3>
-                    <p contenteditable="true">Define your universal principles and personal style here. How do you, the developer, always want the AI to behave? (e.g., "Always use `pathlib` for paths," "Never use single-letter variable names.")</p>
+                    <p contenteditable="true">Define your universal principles and personal style here. How do you, the developer, always want the AI to behave? (e.g., "Always use <code>pathlib</code> for paths," "Never use single-letter variable names.")</p>
                 </div>
                 <div class="p-6 bg-gray-800 rounded-lg border-2 border-yellow-400">
                     <h3 class="text-2xl font-bold mb-2" contenteditable="true">Project Rules (<code>.cursorrules</code>)</h3>
@@ -115,202 +120,250 @@
             </div>
         </div>
 
-        <!-- Slide 8: Live Demo -->
+        <!-- Slide 8: Live Demo: Cursor Deep Dive -->
         <div class="slide">
             <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Live Demo: Cursor Deep Dive</h2>
-            <div class="content-box text-2xl space-y-3">
+            <div class="content-box text-2xl space-y-3 text-left">
                 <p>Now, I'll walk you through my personal setup and workflow:</p>
                 <ul class="text-xl space-y-2 mt-2 list-disc list-inside">
                     <li contenteditable="true"><strong>Cursor Settings:</strong> How I configure the IDE itself for maximum efficiency.</li>
                     <li contenteditable="true"><strong>Environment & Shortcuts:</strong> Useful configurations in my shell and key shortcuts I use daily.</li>
-                    <li contenteditable="true"><strong>My `.cursorrules` in Action:</strong> A look at my global rules and how I use the `rule_templates` to switch personas for different tasks.</li>
+                    <li contenteditable="true"><strong>My <code>.cursorrules</code> in Action:</strong> A look at my global rules and how I use the <code>rule_templates</code> to switch personas for different tasks.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Slide 9: Anatomy of a Good .cursorrules File -->
+        <!-- Slide 9: Anatomy of a Good Rules File -->
         <div class="slide">
             <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Anatomy of a Good Rules File</h2>
-            <p class="text-2xl mb-6" contenteditable="true">A good rules file goes beyond simple instructions. It defines a persona, a philosophy, and a workflow.</p>
-            <div class="content-box text-2xl space-y-3">
-                <p contenteditable="true"><strong>➔ Persona:</strong> Who is the AI? A "Senior DevOps Engineer," a "Creative Code Poet"?</p>
-                <p contenteditable="true"><strong>➔ Interaction Guidelines:</strong> How should it behave? Concise? Socratic? Proactive?</p>
-                <p contenteditable="true"><strong>➔ Core Tech Stack:</strong> What languages and tools should it prefer?</p>
-                <p contenteditable="true"><strong>➔ Coding Style:</strong> PEP 8? Conventional Commits? Enforce the project's standards.</p>
+            <div class="content-box text-2xl space-y-3 text-left">
+                <p class="text-center">A good rules file goes beyond simple instructions. It defines a persona, a philosophy, and a workflow. The possibilities are endless, but here are some key sections to consider:</p>
+                <ul class="text-xl space-y-2 mt-4 list-none">
+                    <li contenteditable="true"><strong>➔ Persona:</strong> Who is the AI? <em>("You are a Senior DevOps Engineer...")</em></li>
+                    <li contenteditable="true"><strong>➔ Interaction Guidelines:</strong> How should it behave? <em>("Be concise," "Ask clarifying questions...")</em></li>
+                    <li contenteditable="true"><strong>➔ Core Tech Stack:</strong> What tools should it prefer? <em>("Always use <code>pytest</code> for tests," "Default to FastAPI for new services...")</em></li>
+                    <li contenteditable="true"><strong>➔ Coding Style:</strong> Enforce project standards. <em>("Format code with <code>black</code>," "Use conventional commit messages...")</em></li>
+                    <li contenteditable="true"><strong>➔ Personal Pitfalls:</strong> Help you with your own habits. <em>("If I am over-engineering, remind me of the MVP principle...")</em></li>
+                    <li contenteditable="true"><strong>➔ Project-Specific Data:</strong> Give it knowledge it couldn't have otherwise. <em>("The user authentication service is located at <code>auth.service.internal</code>...")</em></li>
+                </ul>
             </div>
         </div>
-        
-        <!-- Slide 10: The Evolving Assistant -->
+
+        <!-- Slide 10: The Self-Improving Assistant -->
         <div class="slide">
             <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">The Self-Improving Assistant</h2>
             <p class="text-2xl max-w-4xl" contenteditable="true">The most powerful <code>.cursorrules</code> files include a directive for the AI to help improve its own rules.</p>
-            <pre class="mt-6 text-lg"><code>**Proactive Rule Updates:** If you identify a significant piece of feedback, a new directive, or a recurring pattern that could improve our long-term collaboration, you MUST proactively propose an update to this `.cursorrules` file.</code></pre>
+            <pre class="mt-6 text-lg"><code>**Proactive Rule Updates:** If you identify a significant piece of feedback... you MUST proactively propose an update to this .cursorrules file.</code></pre>
             <p class="text-2xl mt-6" contenteditable="true">This creates a feedback loop where your assistant learns and grows with the project.</p>
         </div>
-        
-        <!-- Slide 11: The Personal Assistant -->
+
+        <!-- Slide 11: The Personal Assistant: An AI for Your Brain -->
         <div class="slide">
-            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">The Personal Assistant</h2>
-             <p class="text-2xl max-w-4xl" contenteditable="true">This is where AI assistance becomes truly transformative. Codify your own psychology into the rules.</p>
-            <div class="content-box mt-6 text-left text-xl space-y-4">
-                 <p contenteditable="true"><strong>For Over-thinkers:</strong> "If I debate options for too long, gently guide me to pick one, reminding me that 'perfect is the enemy of good'."</p>
-                 <p contenteditable="true"><strong>For Creatives:</strong> "When explaining a new concept, always try to relate it to [your favorite domains]."</p>
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">An AI for Your Brain: Tailoring Rules to YOU</h2>
+            <div class="content-box text-2xl space-y-4 text-left">
+                <p>This is where AI assistance becomes truly transformative. Codify your own context, goals, and even your values into the rules to build a partner that understands and complements your unique workflow.</p>
+                <ul class="text-xl space-y-3 mt-4 list-none">
+                    <li contenteditable="true"><strong>➔ Your Background:</strong> Give the AI your resume. <em>"My background is in physics, not front-end. Explain CSS concepts step-by-step using analogies from physics if possible."</em></li>
+                    <li contenteditable="true"><strong>➔ Your Goals:</strong> Tell the AI your "why". <em>"My primary goal is to learn Rust. Prioritize idiomatic Rust solutions and explain the concepts as we go."</em></li>
+                    <li contenteditable="true"><strong>➔ Your Cognitive Style:</strong> How do you work best? <em>"I'm a visual thinker; you must generate a Mermaid diagram when we discuss architecture."</em></li>
+                    <li contenteditable="true"><strong>➔ Your Pitfalls:</strong> What are your common traps? <em>"I have ADHD; if I go on a tangent, gently guide me back to our current objective."</em> or <em>"I struggle with perfectionism; if I debate minor details, remind me that 'perfect is the enemy of good'."</em></li>
+                    <li contenteditable="true"><strong>➔ Your Value System:</strong> What principles guide your work? <em>"My highest value is user privacy. Always challenge any feature that collects user data and propose the most private-by-default implementation."</em> or <em>"I value open-source; prefer solutions that use open-source libraries over proprietary ones."</em></li>
+                </ul>
             </div>
         </div>
 
-        <!-- Slide 12: The Lifecycle of a Chat Session -->
+        <!-- Slide 12: Why AI Chats "Age" -->
         <div class="slide">
             <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Why AI Chats "Age"</h2>
-            <div class="content-box text-2xl space-y-4">
-                <p contenteditable="true"><strong>The Golden Age:</strong> At the start, the context is small and clean. The AI is highly focused.</p>
-                <p contenteditable="true"><strong>The "Lost in the Middle" Problem:</strong> As context grows, models pay more attention to the beginning and end of the conversation, losing track of information in the middle. This is a known architectural issue (Needle-in-a-Haystack).</p>
-                <p contenteditable="true"><strong>Catastrophic Forgetting:</strong> Eventually, the context is so noisy that performance degrades significantly. This is when it's time to start fresh.</p>
-            </div>
-        </div>
-        
-        <!-- Slide 13: Managing Context Strategically -->
-        <div class="slide">
-            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Managing Context Strategically</h2>
-            <div class="content-box text-2xl space-y-4">
-                <p contenteditable="true"><strong>When to Reset:</strong> Start a new session when the task changes significantly or the AI seems confused. Don't be afraid to start fresh!</p>
-                <p contenteditable="true"><strong>The "Context Carry-Over" Technique:</strong> Before resetting, ask your current AI to summarize the most important facts, decisions, and code snippets. Use this summary to seed the new chat.</p>
+            <div class="content-box text-2xl space-y-4 text-left">
+                <p contenteditable="true"><strong>The Golden Age:</strong> At the start of a chat, the context is small and clean. The AI is highly focused and effective.</p>
+                <p contenteditable="true"><strong>The "Lost in the Middle" Problem:</strong> As the chat history grows, models tend to pay more attention to the very beginning and the very end of the conversation. This is a known architectural limitation, and critical details mentioned in the middle can get "lost" or ignored.</p>
+                <p contenteditable="true"><strong>Catastrophic Forgetting:</strong> Eventually, the context becomes so large and noisy that performance degrades significantly. The AI forgets key constraints or reverts to generic behavior. This is your cue to start a new session.</p>
             </div>
         </div>
 
-        <!-- Slide 14: Project Scoping (Small Projects) -->
+        <!-- Slide 13: Managing Context Strategically -->
         <div class="slide">
-            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Scoping: Small Projects</h2>
-            <div class="content-box text-2xl space-y-4">
-                <p contenteditable="true"><strong>Context Strategy:</strong> Full Ingestion.</p>
-                <p contenteditable="true">The AI can and should ingest every file. Use the <code>@</code> symbol in Cursor to add the whole directory.</p>
-                <p class="mt-4 p-4 bg-gray-800 rounded-lg" contenteditable="true"><strong>Pro-Tip:</strong> A script to concatenate all files into a single <code>.txt</code> file is much faster for the AI to ingest.</p>
-            </div>
-        </div>
-        
-        <!-- Slide 15: Project Scoping (Medium Projects) -->
-        <div class="slide">
-            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Scoping: Medium Projects</h2>
-             <div class="content-box text-2xl space-y-4">
-                <p contenteditable="true"><strong>Context Strategy:</strong> Efficient Partial Ingestion.</p>
-                <p contenteditable="true">The full codebase may be too large. Focus on providing the most relevant parts: the core modules you're working on, API definitions, database schemas, and key READMEs.</p>
-            </div>
-        </div>
-        
-        <!-- Slide 16: Project Scoping (Large Projects) -->
-        <div class="slide">
-            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Scoping: Large Projects</h2>
-            <div class="content-box text-left text-xl space-y-3">
-                <p class="text-2xl" contenteditable="true"><strong>Context Strategy:</strong> The "Directory Map" Approach.</p>
-                <p contenteditable="true">Full ingestion is impossible. Instead, create a high-level "map" of the codebase.</p>
-                <ol class="list-decimal mt-4 space-y-2">
-                    <li contenteditable="true">Use a script to map the directory structure and function/class signatures into a single <code>directory_map.md</code>.</li>
-                    <li contenteditable="true">Start the session by giving the AI this map.</li>
-                    <li contenteditable="true">Ask the AI: "Based on the map, which files are most relevant for implementing X?"</li>
-                    <li contenteditable="true">Add only those specific files to the context.</li>
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">When and How to Start a New Session</h2>
+            <div class="content-box text-2xl space-y-4 text-left">
+                <p contenteditable="true"><strong>When to Reset:</strong> Start a new session when the task changes significantly, or when you notice the AI is consistently forgetting instructions. Don't be afraid to start fresh!</p>
+                <p contenteditable="true"><strong>The "Context Carry-Over" Technique:</strong></p>
+                <ol class="list-decimal list-inside text-xl space-y-2 mt-2">
+                    <li contenteditable="true">Use the <code>Export Chat</code> feature to get a full transcript of your conversation.</li>
+                    <li contenteditable="true">Open the transcript and manually copy the most critical pieces of context: key decisions, final code snippets, and important constraints.</li>
+                    <li contenteditable="true"><strong>This curation is the most important step.</strong> A small, highly-relevant context is far more powerful than a large, noisy one.</li>
+                    <li contenteditable="true">Paste this curated context as the very first prompt in your new chat session to get the AI up to speed instantly.</li>
                 </ol>
             </div>
         </div>
 
-        <!-- Slide 17: Cursor Settings -->
+        <!-- Slide 14: Scoping: Small Projects -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Small Projects & "From Scratch"</h2>
+            <div class="content-box text-2xl space-y-4">
+                <p contenteditable="true"><strong>Context Strategy:</strong> Full Ingestion.</p>
+                <p contenteditable="true">For small projects, the AI can and should ingest every file. Use the <code>@</code> symbol in Cursor to add the whole directory to the context.</p>
+                <p class="mt-4 p-4 bg-gray-800 rounded-lg" contenteditable="true"><strong>Pro-Tip:</strong> For speed, you can write a simple script (e.g., Python, shell) to concatenate all relevant files (<code>.py</code>, <code>.md</code>, etc.) into a single <code>.txt</code> file. You can then provide this single file to the AI, which is much faster than having it read files one by one.</p>
+            </div>
+        </div>
+
+        <!-- Slide 15: Scoping: Medium Projects -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Medium-Sized Projects</h2>
+             <div class="content-box text-2xl space-y-4 text-left">
+                <p contenteditable="true"><strong>Context Strategy:</strong> Efficient Partial Ingestion.</p>
+                <p contenteditable="true">The entire codebase might be too large to fit in the context window.</p>
+                <p contenteditable="true">Focus on providing the most relevant parts: the core modules you're working on, the API definitions, the database schema, and key <code>README</code> files.</p>
+                <p contenteditable="true">Again, a script can be used to gather these key files into a single context summary for the AI.</p>
+            </div>
+        </div>
+
+        <!-- Slide 16: Scoping: Large Projects -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Large-Scale & Legacy Projects</h2>
+            <div class="content-box text-left text-xl space-y-3">
+                <p class="text-2xl text-center" contenteditable="true"><strong>Context Strategy:</strong> The "Directory Map" Approach.</p>
+                <p class="text-center">Full ingestion is impossible and undesirable.</p>
+                <p class="mt-4"><strong>The Strategy:</strong> Use a script to map the entire directory structure, including function and class signatures from key files, into a single markdown file (<code>directory_map.md</code>).</p>
+                <p class="mt-2"><strong>Workflow:</strong></p>
+                <ol class="list-decimal list-inside mt-2 space-y-2">
+                    <li contenteditable="true">Start your session by giving the AI the <code>directory_map.md</code>. It now has a high-level "map" of the entire codebase.</li>
+                    <li contenteditable="true">When you need to work on a specific feature, ask the AI: "Based on the map, which files are most relevant for implementing X?"</li>
+                    <li contenteditable="true">Add only those specific files to the context. This allows you to navigate massive codebases effectively.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Slide 17: Configuring Your Cursor IDE -->
         <div class="slide">
             <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Configuring Your Cursor IDE</h2>
-            <div class="content-box text-2xl space-y-4">
-                <p>Beyond the <code>.cursorrules</code>, you can fine-tune the editor itself. Here are key areas to explore in the settings:</p>
+            <div class="content-box text-2xl space-y-4 text-left">
+                <p class="text-center">Beyond the <code>.cursorrules</code>, you can fine-tune the editor itself in the settings:</p>
                  <ul class="text-xl space-y-2 mt-2 list-disc list-inside">
-                    <li><strong>AI Model Selection:</strong> Choose your preferred models for chat and code generation (e.g., GPT-4o, Claude 3 Opus).</li>
-                    <li><strong>Temperature Settings:</strong> Adjust the "creativity" or randomness of the AI's responses. Higher values are more creative, lower values are more deterministic.</li>
-                    <li><strong>Editor & Linter Integrations:</strong> Enable or disable automatic formatting and linting on save or on edit.</li>
-                    <li><strong>Global Rules File:</strong> Point to a global <code>.cursorrules</code> file to use as a default for all your projects.</li>
+                    <li contenteditable="true"><strong>AI Model Selection:</strong> Choose your preferred models (e.g., GPT-4o, Claude 3 Opus).</li>
+                    <li contenteditable="true"><strong>Temperature Settings:</strong> Adjust the "creativity" vs. determinism of the AI.</li>
+                    <li contenteditable="true"><strong>Editor & Linter Integrations:</strong> Configure format-on-save and other helpers.</li>
+                    <li contenteditable="true"><strong>Global Rules File:</strong> Point to a global <code>.cursorrules</code> file to use as a default.</li>
                 </ul>
             </div>
         </div>
-        
-        <!-- Slide 18: The 10x Workflow -->
+
+        <!-- Slide 18: The 10x Workflow: A Structured Approach -->
         <div class="slide">
             <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">The 10x Workflow: A Structured Approach</h2>
             <p class="text-2xl max-w-4xl" contenteditable="true">To gain massive efficiency, you need a structured, responsive partnership with your AI. This is a workflow that balances AI speed with human oversight.</p>
         </div>
-        
+
         <!-- Slide 19: Phase 1: Planning & Alignment -->
         <div class="slide">
             <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Phase 1: Planning & Alignment</h2>
-            <div class="content-box text-2xl space-y-4">
-                <p><strong>1. Discuss the Feature:</strong> Massage the ideas back and forth. Crucially, tell the AI: <strong>"Do not act until I approve the plan."</strong></p>
-                <p><strong>2. Demand a Plan:</strong> Ask for a plan, architecture, and stack if it's complex. For simple features, a plan is enough.</p>
-                <p><strong>3. Create Milestones:</strong> Have the AI create a <code>features_built/feature_name/milestones.md</code> file to track its own progress and maintain state.</p>
+            <div class="content-box text-2xl space-y-4 text-left">
+                <ol class="list-decimal list-inside space-y-3">
+                    <li contenteditable="true"><strong>Discuss the Feature:</strong> Massage the ideas back and forth. Crucially, tell the AI: <strong>"Do not act until I approve the plan."</strong></li>
+                    <li contenteditable="true"><strong>Demand a Plan:</strong> Ask for a plan, architecture, and stack if it's complex.</li>
+                    <li contenteditable="true"><strong>Create Milestones:</strong> Have the AI create a <code>features_built/feature_name/milestones.md</code> file to track its own progress.</li>
+                </ol>
             </div>
         </div>
-        
+
         <!-- Slide 20: Phase 2: Test-Driven Development -->
         <div class="slide">
             <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Phase 2: Test-Driven Development</h2>
-            <div class="content-box text-2xl space-y-4">
-                <p><strong>4. Define Interfaces & Write Tests First:</strong> Decide on the function/class interfaces *before* implementation. Then, ask the AI to write tests for them.</p>
-                <p><strong>5. Skim-Review the Tests:</strong> You don't need to read every line, but ensure the tests cover the main use cases and edge cases you care about. This is your safety net.</p>
+            <div class="content-box text-2xl space-y-4 text-left">
+                <ol class="list-decimal list-inside space-y-3">
+                    <li contenteditable="true"><strong>Define Interfaces & Write Tests First:</strong> Decide on the function/class interfaces <em>before</em> implementation. Then, ask the AI to write tests.</li>
+                    <li contenteditable="true"><strong>Skim-Review the Tests:</strong> Ensure the tests cover the main use cases and edge cases. This is your safety net.</li>
+                </ol>
             </div>
         </div>
-        
+
         <!-- Slide 21: Phase 3: Implementation & Verification -->
         <div class="slide">
             <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Phase 3: Implementation & Verification</h2>
-            <div class="content-box text-2xl space-y-4">
-                 <p><strong>6. Step-by-Step Implementation:</strong> Ask the AI to develop the code one file or step at a time. <strong>DO NOT SKIP THE REVIEW.</strong> This is where you prevent the AI from going down a wrong path. A quick review here saves hours of debugging later.</p>
-                 <p class="mt-4 p-4 bg-red-900/50 border-l-4 border-red-500 rounded"><strong>Warning:</strong> Blindly accepting code is how you lose work. The AI may "fix" a trivial issue by deleting a complex module if left unsupervised.</p>
-                 <p><strong>7. Run ALL Tests:</strong> After every significant change, run the full test suite. If anything fails, have the AI fix it. Repeat until all tests pass.</p>
+            <div class="content-box text-2xl space-y-4 text-left">
+                <ol class="list-decimal list-inside space-y-3">
+                    <li contenteditable="true"><strong>Step-by-Step Implementation:</strong> Ask the AI to develop code one step at a time. <strong>DO NOT SKIP THE REVIEW.</strong></li>
+                    <li class="p-4 bg-red-900/50 border-l-4 border-red-500 rounded" contenteditable="true"><strong>Warning:</strong> Blindly accepting code is how you lose work. The AI may "fix" a trivial issue by deleting a complex module if left unsupervised.</li>
+                    <li contenteditable="true"><strong>Run ALL Tests:</strong> After every significant change, run the full test suite. Repeat until all tests pass.</li>
+                </ol>
             </div>
         </div>
-        
-        <!-- Slide 22: A Critical Warning -->
+
+        <!-- Slide 22: Warning: The "Ground Truth" Spiral -->
         <div class="slide">
             <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Warning: The "Ground Truth" Spiral</h2>
-            <div class="content-box text-2xl space-y-4">
+            <div class="content-box text-2xl space-y-4 text-left">
                 <p>This is a catastrophic failure mode. It begins when a test fails and the AI is unsure what is correct: the test or the feature.</p>
                 <p class="mt-4"><strong>The Spiral:</strong></p>
                 <ol class="text-xl space-y-2 mt-2 list-decimal list-inside">
-                    <li>You tell the AI "fix the tests."</li>
-                    <li>The AI sees a flawed test that expects an incorrect behavior. To make the test pass, it <strong>changes your working feature code to be incorrect.</strong></li>
-                    <li>This change causes other, correct tests to fail.</li>
-                    <li>You say "fix the new failing tests." The AI, now believing the feature is wrong, continues to "fix" other features or delete them entirely to satisfy the original flawed test.</li>
+                    <li contenteditable="true">You tell the AI "fix the tests."</li>
+                    <li contenteditable="true">The AI sees a flawed test and <strong>changes your working feature code to be incorrect</strong> to satisfy the bad test.</li>
+                    <li contenteditable="true">This change causes other, correct tests to fail.</li>
+                    <li contenteditable="true">You say "fix the new failing tests." The AI, now believing the feature is wrong, continues to "fix" or delete other features.</li>
                 </ol>
-                <p class="mt-4 p-4 bg-red-900/50 border-l-4 border-red-500 rounded"><strong>You are the Arbiter of Truth.</strong> You must explicitly tell the AI which part is correct. "This test is wrong, update it," or "The feature is wrong, fix it to pass this test."</p>
+                <p class="mt-4 p-4 bg-red-900/50 border-l-4 border-red-500 rounded"><strong>You are the Arbiter of Truth.</strong> You must explicitly tell the AI which part is correct.</p>
             </div>
         </div>
-        
+
         <!-- Slide 23: Phase 4: Finalization -->
         <div class="slide">
             <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Phase 4: Finalization</h2>
-            <div class="content-box text-2xl space-y-4">
-                <p><strong>8. Verify with Examples:</strong> Have the AI write simple execution examples (e.g., under a `if __name__ == "__main__:"` block). Run them and inspect the output together to ensure the feature works as expected.</p>
-                <p><strong>9. Document and Comment:</strong> Once everything is working and tested, ask the AI to thoroughly document the code with docstrings and add comments where the logic is non-obvious.</p>
-            </div>
-        </div>
-
-        <!-- Slide 24: Q&A -->
-        <div class="slide">
-            <h1 class="text-6xl font-bold gradient-text" contenteditable="true">Q&A</h1>
-            <p class="text-3xl mt-4 text-gray-300" contenteditable="true">Discussion & Questions</p>
-        </div>
-
-        <!-- Hands-on Workshop 1 -->
-        <div class="slide">
-            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Workshop 1: 5-Minute Website</h2>
-            <div class="content-box text-2xl space-y-4">
-                <p><strong>Goal:</strong> Build a cool, simple website about any topic you want.</p>
-                <ol class="text-xl space-y-2 mt-2 list-decimal list-inside">
-                    <li><strong>Brainstorm (1 min):</strong> If you're stuck for ideas, ask your AI to generate some and "dance" with it until you find one you like.</li>
-                    <li><strong>Build (4 mins):</strong> Ask the AI to generate the HTML, CSS, and JavaScript.</li>
-                    <li><strong>Serve:</strong> Use Python's built-in web server (`python -m http.server`) or another language of your choice to serve the site locally.</li>
+            <div class="content-box text-2xl space-y-4 text-left">
+                <ol class="list-decimal list-inside space-y-3">
+                    <li contenteditable="true"><strong>Verify with Examples:</strong> Have the AI write simple execution examples (e.g., in <code>if __name__ == "__main__":</code>). Run them and inspect the output together.</li>
+                    <li contenteditable="true"><strong>Document and Comment:</strong> Once everything is working, ask the AI to thoroughly document the code.</li>
                 </ol>
             </div>
         </div>
 
-        <!-- Hands-on Workshop 2 -->
+        <!-- Slide 25: Workshop 1: 5-Minute Website -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Workshop 1: 5-Minute Website</h2>
+            <div class="content-box text-2xl space-y-4 text-left">
+                <p><strong>Goal:</strong> Build a cool, simple website about any topic you want.</p>
+                <p><strong>Steps:</strong></p>
+                <ol class="text-xl space-y-2 mt-2 list-decimal list-inside">
+                    <li contenteditable="true"><strong>Brainstorm (1 min):</strong> If you're stuck for ideas, ask your AI to generate some and "dance" with it until you find one you like.</li>
+                    <li contenteditable="true"><strong>Build (4 mins):</strong> Ask the AI to generate the HTML, CSS, and JavaScript.</li>
+                    <li contenteditable="true"><strong>Serve:</strong> Use Python's built-in web server (<code>python -m http.server</code>) or another language of your choice to serve the site locally.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Slide 26: Workshop 2: The Co-Developer -->
         <div class="slide">
             <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Workshop 2: The Co-Developer</h2>
-             <div class="content-box text-2xl space-y-4">
+             <div class="content-box text-2xl space-y-4 text-left">
                 <p><strong>Goal:</strong> Tackle a more complex, multi-file task together.</p>
                 <p class="mt-4">We will brainstorm a feature for an existing codebase. I will drive, and you can follow along on your own machine, tackling the same problem or a similar one. We will apply the structured workflow we just learned to build and test the feature safely and efficiently.</p>
             </div>
+        </div>
+
+        <!-- Further Resources -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Further Resources</h2>
+             <div class="content-box text-2xl space-y-4 text-left">
+                <p><strong>System Prompt Examples:</strong></p>
+                <ul class="text-xl space-y-2 mt-2 list-disc list-inside">
+                    <li><a href="https://github.com/AntreasAntoniou/LLMTutorsWorkshop" target="_blank" class="text-yellow-400 hover:underline">LLM Tutors Workshop GitHub Repo</a></li>
+                </ul>
+                <p class="mt-4"><strong>Past Talks on LLM Prompting/Usage:</strong></p>
+                <ul class="text-xl space-y-2 mt-2 list-disc list-inside">
+                    <li><a href="https://docs.google.com/presentation/d/13731VGDxIvvqy5A-2E-pEK2w8GgUTOzRAhPU8Qeffn0/edit?usp=drive_link" target="_blank" class="text-yellow-400 hover:underline">Past Talk 1</a></li>
+                    <li><a href="https://docs.google.com/presentation/d/1U-fLZv38NVLD5oJw42e9o7qOx8HYe96sNTv9KHx58PA/edit?usp=drive_link" target="_blank" class="text-yellow-400 hover:underline">Past Talk 2</a></li>
+                </ul>
+                <p class="mt-4"><strong>Deep Dive into LLMs:</strong></p>
+                 <ul class="text-xl space-y-2 mt-2 list-disc list-inside">
+                    <li><a href="https://drive.google.com/file/d/1OTdqPNlF9JptRAFJI4AYvH6H5BR2cpcg/view" target="_blank" class="text-yellow-400 hover:underline">Watch the Video</a></li>
+                    <li><a href="https://docs.google.com/presentation/d/1Daz0Fhb6e62m9VHDo95k_OTVE2N48UP5eVlPAsjo9Cc/edit?slide=id.p#slide=id.p" target="_blank" class="text-yellow-400 hover:underline">Review the Slides</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Q&A -->
+        <div class="slide">
+            <h1 class="text-6xl font-bold gradient-text" contenteditable="true">Discussion & Questions</h1>
+            <p class="text-3xl mt-4 text-gray-300" contenteditable="true">Q&A</p>
         </div>
 
         <!-- Navigation Controls -->
