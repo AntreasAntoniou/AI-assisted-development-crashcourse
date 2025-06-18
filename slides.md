@@ -177,13 +177,28 @@
 
 ---
 
-### **Slide 18: The 10x Workflow: A Structured Approach**
+### **Slide 18: Supercharging Your Workflow with Custom Tools**
+-   **Title:** Supercharging Your Workflow with Custom Tools
+-   **Content:**
+    -   The real power of AI-assisted development comes from teaching your assistant to use tools you build for it.
+    -   **1. Create Your Own Scripts:**
+        -   Build helper scripts for common tasks. We just created `ingest_content.py` to package context and `map_directory.py` to understand large codebases.
+        -   Think of others: a script to refresh a database, deploy to staging, or run a specific set of integration tests.
+        -   Use your `.cursorrules` to tell the AI about these scripts. For example: `You have access to a script: 'python scripts/ingest_content.py'. You can use it to ingest a directory for context.`
+        -   Now you can ask the AI to perform these actions using natural language: "Ingest the 'src' directory for me."
+    -   **2. Connect to External Services (MCP Servers):**
+        -   For advanced users, Cursor can interact with external servers or services you create (sometimes called MCP or "Mind-Control-Protocol" servers).
+        -   This allows the AI to have a persistent state, memory, or access to other APIs, turning your assistant into a truly integrated part of your development ecosystem.
+
+---
+
+### **Slide 19: The 10x Workflow: A Structured Approach**
 -   **Title:** The 10x Workflow: A Structured Approach
 -   **Content:** To gain massive efficiency, you need a structured, responsive partnership with your AI. This is a workflow that balances AI speed with human oversight.
 
 ---
 
-### **Slide 19: Phase 1: Planning & Alignment**
+### **Slide 20: Phase 1: Planning & Alignment**
 -   **Title:** Phase 1: Planning & Alignment
 -   **Content:**
     1.  **Discuss the Feature:** Massage the ideas back and forth. Crucially, tell the AI: **"Do not act until I approve the plan."**
@@ -192,7 +207,7 @@
 
 ---
 
-### **Slide 20: Phase 2: Test-Driven Development**
+### **Slide 21: Phase 2: Test-Driven Development**
 -   **Title:** Phase 2: Test-Driven Development
 -   **Content:**
     1.  **Define Interfaces & Write Tests First:** Decide on the function/class interfaces *before* implementation. Then, ask the AI to write tests.
@@ -200,7 +215,7 @@
 
 ---
 
-### **Slide 21: Phase 3: Implementation & Verification**
+### **Slide 22: Phase 3: Implementation & Verification**
 -   **Title:** Phase 3: Implementation & Verification
 -   **Content:**
     1.  **Step-by-Step Implementation:** Ask the AI to develop code one step at a time. **DO NOT SKIP THE REVIEW.**
@@ -209,7 +224,7 @@
 
 ---
 
-### **Slide 22: Warning: The "Ground Truth" Spiral**
+### **Slide 23: Warning: The "Ground Truth" Spiral**
 -   **Title:** Warning: The "Ground Truth" Spiral
 -   **Content:**
     -   This is a catastrophic failure mode. It begins when a test fails and the AI is unsure what is correct: the test or the feature.
@@ -222,7 +237,7 @@
 
 ---
 
-### **Slide 23: Phase 4: Finalization**
+### **Slide 24: Phase 4: Finalization**
 -   **Title:** Phase 4: Finalization
 -   **Content:**
     1.  **Verify with Examples:** Have the AI write simple execution examples (e.g., in `if __name__ == "__main__:"`). Run them and inspect the output together.
@@ -230,13 +245,13 @@
 
 ---
 
-### **Slide 24: Q&A**
+### **Slide 25: Q&A**
 -   **Title:** Discussion & Questions
 -   **Content:** Q&A
 
 ---
 
-### **Slide 25: Workshop 1: 5-Minute Website**
+### **Slide 26: Workshop 1: 5-Minute Website**
 -   **Title:** Workshop 1: 5-Minute Website
 -   **Content:**
     -   **Goal:** Build a cool, simple website about any topic you want.
@@ -247,7 +262,7 @@
 
 ---
 
-### **Slide 26: Workshop 2: The Co-Developer**
+### **Slide 27: Workshop 2: The Co-Developer**
 -   **Title:** Workshop 2: The Co-Developer
 -   **Content:**
     -   **Goal:** Tackle a more complex, multi-file task together.
