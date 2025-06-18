@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Assisted Development: A Crash Course</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #1a1a1a; color: #ffffff; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden; }
+        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
+        .slide-container { z-index: 1; width: 90%; height: 90%; max-width: 1200px; max-height: 800px; position: relative; border: 1px solid #333; border-radius: 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.3); background-color: rgba(26, 26, 26, 0.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+        .slide { width: 100%; height: 100%; padding: 4rem 4rem 5rem 4rem; display: none; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: absolute; top: 0; left: 0; }
+        .slide.active { display: flex; }
+        .gradient-text { background: linear-gradient(135deg, #FFD21E 0%, #FFA500 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .navigation { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; gap: 1rem; align-items: center; }
+        .nav-button { background-color: #333; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer; user-select: none; transition: background-color 0.2s; }
+        .nav-button:hover { background-color: #444; }
+        .slide-counter { color: #888; }
+        code { background-color: #2a2a2a; color: #f8f8f2; padding: 0.2em 0.4em; margin: 0; font-size: 0.85em; border-radius: 3px; }
+        pre { background-color: #2a2a2a; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; text-align: left; width: 100%; max-width: 50rem; }
+        pre code { padding: 0; background: none; }
+        ul, ol { list-style-position: inside; text-align: left; }
+        .content-box { text-align: left; width: 100%; max-width: 50rem; }
+        strong { color: #FFD21E; }
+        [contenteditable="true"]:focus { outline: 2px dashed #FFD21E; background-color: rgba(255, 210, 30, 0.1); }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="slide-container">
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <h1 class="text-6xl font-bold gradient-text" contenteditable="true">AI-Assisted Development</h1>
+            <p class="text-3xl mt-4 text-gray-300" contenteditable="true">From Prompting Fundamentals to Advanced Persona-Driven Workflows</p>
+        </div>
+
+        <!-- Slide 2: The Modern AI Toolbox -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">The Modern AI Toolbox</h2>
+            <div class="content-box text-2xl space-y-6">
+                <p contenteditable="true"><strong>Codex (OpenAI):</strong> The foundational model, now significantly revamped, that powers the latest generation of GitHub Copilot. The OG of code generation.</p>
+                <p contenteditable="true"><strong>Claude Code (Anthropic):</strong> A new, powerful coding assistant known for its large context window and strong reasoning abilities. Excellent for complex logic and documentation.</p>
+                <p contenteditable="true"><strong>Cursor:</strong> An "AI-first" code editor built for deep AI collaboration. Our focus for today.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Why Cursor? -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Why Focus on Cursor?</h2>
+            <div class="content-box text-3xl space-y-4">
+                <p contenteditable="true">Cursor treats the AI as a genuine collaborator that can be taught and molded.</p>
+                <p class="mt-6 p-4 bg-yellow-900/30 border-l-4 border-yellow-400 rounded" contenteditable="true">The core of this is the <code>.cursorrules</code> file, which allows us to create persistent, persona-driven assistants.</p>
+            </div>
+        </div>
+
+        <!-- Slide 4: The Art of the Prompt -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">The Art of the Prompt</h2>
+            <ul class="text-2xl space-y-4 content-box">
+                <li contenteditable="true"><strong>Specificity is Key:</strong> Vague questions get vague answers. Provide details, examples, and constraints.</li>
+                <li contenteditable="true"><strong>Provide Context:</strong> Give the AI the surrounding code, the error message, and your ultimate goal.</li>
+                <li contenteditable="true"><strong>Assume a Persona:</strong> Tell the AI *who* it should be. "You are a senior Python developer..."</li>
+                <li contenteditable="true"><strong>Iterate and Refine:</strong> Treat prompting as a conversation. Your first prompt is rarely your last.</li>
+            </ul>
+        </div>
+        
+        <!-- Slide 5: LLM Psychology & Intuition -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">LLM Psychology & Intuition</h2>
+            <div class="content-box text-2xl space-y-4">
+                <p contenteditable="true">An LLM is a prediction engine, not a thinking one. But because it's trained on human text, it responds to human-like interaction. This is where intuition comes in.</p>
+                <p class="mt-4" contenteditable="true"><strong>Finding the Vibe:</strong> Think of it like tuning a radio or finding a dance partner. You're trying to find the "frequency" of the desired response. This context includes more than just a persona:</p>
+                <ul class="text-xl space-y-2 mt-2 list-disc list-inside">
+                    <li contenteditable="true">The right code snippets.</li>
+                    <li contenteditable="true">A clear instruction and goal.</li>
+                    <li contenteditable="true">A specific persona or role.</li>
+                    <li contenteditable="true">Examples of the desired output.</li>
+                </ul>
+                <p class="mt-2" contenteditable="true">By providing this rich context, you are "leading the dance," making it easy for your AI partner to follow.</p>
+            </div>
+        </div>
+
+        <!-- Slide 6: Pro-Level Tips & Tricks -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Pro-Level Tips & Tricks</h2>
+            <ul class="text-2xl space-y-6 content-box">
+                <li contenteditable="true"><strong>Meta-Prompting:</strong> If you don't know how to ask, ask the AI! "How should I prompt you to get a well-structured FastAPI endpoint?"</li>
+                <li contenteditable="true"><strong>The "Unstuck" Protocol:</strong> When frustrated, narrate your problem to the AI. "I'm stuck because this error is confusing. My goal is X. Here's my code. Help me." This provides incredible context for the model.</li>
+                <li contenteditable="true"><strong>Crafting Context:</strong> The best context includes the code, the goal, and the desired output format.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 7: The .cursorrules File -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Global vs. Project Rules: A Strategy</h2>
+            <p class="text-2xl max-w-4xl mb-6" contenteditable="true">Both rule sets are critical for efficiency. The key is to layer them correctly.</p>
+            <div class="flex gap-8 text-left">
+                <div class="p-6 bg-gray-800 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-2" contenteditable="true">Global Rules (User Settings)</h3>
+                    <p contenteditable="true">Define your universal principles and personal style here. How do you, the developer, always want the AI to behave? (e.g., "Always use `pathlib` for paths," "Never use single-letter variable names.")</p>
+                </div>
+                <div class="p-6 bg-gray-800 rounded-lg border-2 border-yellow-400">
+                    <h3 class="text-2xl font-bold mb-2" contenteditable="true">Project Rules (<code>.cursorrules</code>)</h3>
+                    <p contenteditable="true">Define project-specifics here. This file overrides the global rules and should contain the project's tech stack, coding conventions, and the specific AI persona for this context.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Live Demo -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Live Demo: My Cursor Settings</h2>
+            <p class="text-3xl max-w-4xl" contenteditable="true">Now, I'll walk you through my personal Cursor configuration, including my global rules and how I tailor them for different projects.</p>
+            <p class="text-xl mt-8 text-gray-400" contenteditable="true">(This is your cue to open your Cursor settings and share your screen.)</p>
+        </div>
+
+        <!-- Slide 9: Anatomy of a Good .cursorrules File -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Anatomy of a Good Rules File</h2>
+            <p class="text-2xl mb-6" contenteditable="true">A good rules file goes beyond simple instructions. It defines a persona, a philosophy, and a workflow.</p>
+            <div class="content-box text-2xl space-y-3">
+                <p contenteditable="true"><strong>➔ Persona:</strong> Who is the AI? A "Senior DevOps Engineer," a "Creative Code Poet"?</p>
+                <p contenteditable="true"><strong>➔ Interaction Guidelines:</strong> How should it behave? Concise? Socratic? Proactive?</p>
+                <p contenteditable="true"><strong>➔ Core Tech Stack:</strong> What languages and tools should it prefer?</p>
+                <p contenteditable="true"><strong>➔ Coding Style:</strong> PEP 8? Conventional Commits? Enforce the project's standards.</p>
+            </div>
+        </div>
+        
+        <!-- Slide 10: The Evolving Assistant -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">The Self-Improving Assistant</h2>
+            <p class="text-2xl max-w-4xl" contenteditable="true">The most powerful <code>.cursorrules</code> files include a directive for the AI to help improve its own rules.</p>
+            <pre class="mt-6 text-lg"><code>**Proactive Rule Updates:** If you identify a significant piece of feedback, a new directive, or a recurring pattern that could improve our long-term collaboration, you MUST proactively propose an update to this `.cursorrules` file.</code></pre>
+            <p class="text-2xl mt-6" contenteditable="true">This creates a feedback loop where your assistant learns and grows with the project.</p>
+        </div>
+        
+        <!-- Slide 11: The Personal Assistant -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">The Personal Assistant</h2>
+             <p class="text-2xl max-w-4xl" contenteditable="true">This is where AI assistance becomes truly transformative. Codify your own psychology into the rules.</p>
+            <div class="content-box mt-6 text-left text-xl space-y-4">
+                 <p contenteditable="true"><strong>For Over-thinkers:</strong> "If I debate options for too long, gently guide me to pick one, reminding me that 'perfect is the enemy of good'."</p>
+                 <p contenteditable="true"><strong>For Creatives:</strong> "When explaining a new concept, always try to relate it to [your favorite domains]."</p>
+            </div>
+        </div>
+
+        <!-- Slide 12: The Lifecycle of a Chat Session -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Why AI Chats "Age"</h2>
+            <div class="content-box text-2xl space-y-4">
+                <p contenteditable="true"><strong>The Golden Age:</strong> At the start, the context is small and clean. The AI is highly focused.</p>
+                <p contenteditable="true"><strong>The "Lost in the Middle" Problem:</strong> As context grows, models pay more attention to the beginning and end of the conversation, losing track of information in the middle. This is a known architectural issue (Needle-in-a-Haystack).</p>
+                <p contenteditable="true"><strong>Catastrophic Forgetting:</strong> Eventually, the context is so noisy that performance degrades significantly. This is when it's time to start fresh.</p>
+            </div>
+        </div>
+        
+        <!-- Slide 13: Managing Context Strategically -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Managing Context Strategically</h2>
+            <div class="content-box text-2xl space-y-4">
+                <p contenteditable="true"><strong>When to Reset:</strong> Start a new session when the task changes significantly or the AI seems confused. Don't be afraid to start fresh!</p>
+                <p contenteditable="true"><strong>The "Context Carry-Over" Technique:</strong> Before resetting, ask your current AI to summarize the most important facts, decisions, and code snippets. Use this summary to seed the new chat.</p>
+            </div>
+        </div>
+
+        <!-- Slide 14: Project Scoping (Small Projects) -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Scoping: Small Projects</h2>
+            <div class="content-box text-2xl space-y-4">
+                <p contenteditable="true"><strong>Context Strategy:</strong> Full Ingestion.</p>
+                <p contenteditable="true">The AI can and should ingest every file. Use the <code>@</code> symbol in Cursor to add the whole directory.</p>
+                <p class="mt-4 p-4 bg-gray-800 rounded-lg" contenteditable="true"><strong>Pro-Tip:</strong> A script to concatenate all files into a single <code>.txt</code> file is much faster for the AI to ingest.</p>
+            </div>
+        </div>
+        
+        <!-- Slide 15: Project Scoping (Medium Projects) -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Scoping: Medium Projects</h2>
+             <div class="content-box text-2xl space-y-4">
+                <p contenteditable="true"><strong>Context Strategy:</strong> Efficient Partial Ingestion.</p>
+                <p contenteditable="true">The full codebase may be too large. Focus on providing the most relevant parts: the core modules you're working on, API definitions, database schemas, and key READMEs.</p>
+            </div>
+        </div>
+        
+        <!-- Slide 16: Project Scoping (Large Projects) -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Scoping: Large Projects</h2>
+            <div class="content-box text-left text-xl space-y-3">
+                <p class="text-2xl" contenteditable="true"><strong>Context Strategy:</strong> The "Directory Map" Approach.</p>
+                <p contenteditable="true">Full ingestion is impossible. Instead, create a high-level "map" of the codebase.</p>
+                <ol class="list-decimal mt-4 space-y-2">
+                    <li contenteditable="true">Use a script to map the directory structure and function/class signatures into a single <code>directory_map.md</code>.</li>
+                    <li contenteditable="true">Start the session by giving the AI this map.</li>
+                    <li contenteditable="true">Ask the AI: "Based on the map, which files are most relevant for implementing X?"</li>
+                    <li contenteditable="true">Add only those specific files to the context.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Slide 17: Cursor Settings -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Configuring Your Cursor IDE</h2>
+            <div class="content-box text-2xl space-y-4">
+                <p>Beyond the <code>.cursorrules</code>, you can fine-tune the editor itself. Here are key areas to explore in the settings:</p>
+                 <ul class="text-xl space-y-2 mt-2 list-disc list-inside">
+                    <li><strong>AI Model Selection:</strong> Choose your preferred models for chat and code generation (e.g., GPT-4o, Claude 3 Opus).</li>
+                    <li><strong>Temperature Settings:</strong> Adjust the "creativity" or randomness of the AI's responses. Higher values are more creative, lower values are more deterministic.</li>
+                    <li><strong>Editor & Linter Integrations:</strong> Enable or disable automatic formatting and linting on save or on edit.</li>
+                    <li><strong>Global Rules File:</strong> Point to a global <code>.cursorrules</code> file to use as a default for all your projects.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Slide 18: The 10x Workflow -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">The 10x Workflow: A Structured Approach</h2>
+            <p class="text-2xl max-w-4xl" contenteditable="true">To gain massive efficiency, you need a structured, responsive partnership with your AI. This is a workflow that balances AI speed with human oversight.</p>
+        </div>
+        
+        <!-- Slide 19: Phase 1: Planning & Alignment -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Phase 1: Planning & Alignment</h2>
+            <div class="content-box text-2xl space-y-4">
+                <p><strong>1. Discuss the Feature:</strong> Massage the ideas back and forth. Crucially, tell the AI: <strong>"Do not act until I approve the plan."</strong></p>
+                <p><strong>2. Demand a Plan:</strong> Ask for a plan, architecture, and stack if it's complex. For simple features, a plan is enough.</p>
+                <p><strong>3. Create Milestones:</strong> Have the AI create a <code>features_built/feature_name/milestones.md</code> file to track its own progress and maintain state.</p>
+            </div>
+        </div>
+        
+        <!-- Slide 20: Phase 2: Test-Driven Development -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Phase 2: Test-Driven Development</h2>
+            <div class="content-box text-2xl space-y-4">
+                <p><strong>4. Define Interfaces & Write Tests First:</strong> Decide on the function/class interfaces *before* implementation. Then, ask the AI to write tests for them.</p>
+                <p><strong>5. Skim-Review the Tests:</strong> You don't need to read every line, but ensure the tests cover the main use cases and edge cases you care about. This is your safety net.</p>
+            </div>
+        </div>
+        
+        <!-- Slide 21: Phase 3: Implementation & Verification -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Phase 3: Implementation & Verification</h2>
+            <div class="content-box text-2xl space-y-4">
+                 <p><strong>6. Step-by-Step Implementation:</strong> Ask the AI to develop the code one file or step at a time. <strong>DO NOT SKIP THE REVIEW.</strong> This is where you prevent the AI from going down a wrong path. A quick review here saves hours of debugging later.</p>
+                 <p class="mt-4 p-4 bg-red-900/50 border-l-4 border-red-500 rounded"><strong>Warning:</strong> Blindly accepting code is how you lose work. The AI may "fix" a trivial issue by deleting a complex module if left unsupervised.</p>
+                 <p><strong>7. Run ALL Tests:</strong> After every significant change, run the full test suite. If anything fails, have the AI fix it. Repeat until all tests pass.</p>
+            </div>
+        </div>
+        
+        <!-- Slide 22: A Critical Warning -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Warning: The "Ground Truth" Spiral</h2>
+            <div class="content-box text-2xl space-y-4">
+                <p>This is a catastrophic failure mode. It begins when a test fails and the AI is unsure what is correct: the test or the feature.</p>
+                <p class="mt-4"><strong>The Spiral:</strong></p>
+                <ol class="text-xl space-y-2 mt-2 list-decimal list-inside">
+                    <li>You tell the AI "fix the tests."</li>
+                    <li>The AI sees a flawed test that expects an incorrect behavior. To make the test pass, it <strong>changes your working feature code to be incorrect.</strong></li>
+                    <li>This change causes other, correct tests to fail.</li>
+                    <li>You say "fix the new failing tests." The AI, now believing the feature is wrong, continues to "fix" other features or delete them entirely to satisfy the original flawed test.</li>
+                </ol>
+                <p class="mt-4 p-4 bg-red-900/50 border-l-4 border-red-500 rounded"><strong>You are the Arbiter of Truth.</strong> You must explicitly tell the AI which part is correct. "This test is wrong, update it," or "The feature is wrong, fix it to pass this test."</p>
+            </div>
+        </div>
+        
+        <!-- Slide 23: Phase 4: Finalization -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Phase 4: Finalization</h2>
+            <div class="content-box text-2xl space-y-4">
+                <p><strong>8. Verify with Examples:</strong> Have the AI write simple execution examples (e.g., under a `if __name__ == "__main__:"` block). Run them and inspect the output together to ensure the feature works as expected.</p>
+                <p><strong>9. Document and Comment:</strong> Once everything is working and tested, ask the AI to thoroughly document the code with docstrings and add comments where the logic is non-obvious.</p>
+            </div>
+        </div>
+
+        <!-- Slide 24: Q&A -->
+        <div class="slide">
+            <h1 class="text-6xl font-bold gradient-text" contenteditable="true">Q&A</h1>
+            <p class="text-3xl mt-4 text-gray-300" contenteditable="true">Discussion & Questions</p>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="navigation">
+            <div class="nav-button" id="prev">←</div>
+            <div class="slide-counter">1 / 24</div>
+            <div class="nav-button" id="next">→</div>
+            <div class="nav-button" id="fullscreen">⛶</div>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        const fullscreenButton = document.getElementById('fullscreen');
+        const slideCounter = document.querySelector('.slide-counter');
+        const totalSlides = slides.length;
+        let currentSlide = 0;
+
+        function updateCounter() {
+            slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+        }
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            updateCounter();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'f') { // 'f' for fullscreen
+                fullscreenButton.click();
+            }
+        });
+
+        fullscreenButton.addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        });
+
+        showSlide(currentSlide);
+        
+        particlesJS('particles-js', {
+            particles: { number: { value: 80, density: { enable: true, value_area: 800 } }, color: { value: '#FFD21E' }, shape: { type: 'circle' }, opacity: { value: 0.5, random: false }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 150, color: '#FFD21E', opacity: 0.2, width: 1 }, move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false } },
+            interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true }, modes: { grab: { distance: 140, line_linked: { opacity: 0.5 } }, push: { particles_nb: 4 } } },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html> 

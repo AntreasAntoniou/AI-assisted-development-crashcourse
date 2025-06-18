@@ -1,0 +1,6 @@
+rich
+fire
+
+[dev]
+ruff
+pytest

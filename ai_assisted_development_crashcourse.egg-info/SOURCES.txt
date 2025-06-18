@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+ai_assisted_development_crashcourse.egg-info/PKG-INFO
+ai_assisted_development_crashcourse.egg-info/SOURCES.txt
+ai_assisted_development_crashcourse.egg-info/dependency_links.txt
+ai_assisted_development_crashcourse.egg-info/requires.txt
+ai_assisted_development_crashcourse.egg-info/top_level.txt
