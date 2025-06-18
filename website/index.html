@@ -117,9 +117,15 @@
 
         <!-- Slide 8: Live Demo -->
         <div class="slide">
-            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Live Demo: My Cursor Settings</h2>
-            <p class="text-3xl max-w-4xl" contenteditable="true">Now, I'll walk you through my personal Cursor configuration, including my global rules and how I tailor them for different projects.</p>
-            <p class="text-xl mt-8 text-gray-400" contenteditable="true">(This is your cue to open your Cursor settings and share your screen.)</p>
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Live Demo: Cursor Deep Dive</h2>
+            <div class="content-box text-2xl space-y-3">
+                <p>Now, I'll walk you through my personal setup and workflow:</p>
+                <ul class="text-xl space-y-2 mt-2 list-disc list-inside">
+                    <li contenteditable="true"><strong>Cursor Settings:</strong> How I configure the IDE itself for maximum efficiency.</li>
+                    <li contenteditable="true"><strong>Environment & Shortcuts:</strong> Useful configurations in my shell and key shortcuts I use daily.</li>
+                    <li contenteditable="true"><strong>My `.cursorrules` in Action:</strong> A look at my global rules and how I use the `rule_templates` to switch personas for different tasks.</li>
+                </ul>
+            </div>
         </div>
 
         <!-- Slide 9: Anatomy of a Good .cursorrules File -->
@@ -285,10 +291,32 @@
             <p class="text-3xl mt-4 text-gray-300" contenteditable="true">Discussion & Questions</p>
         </div>
 
+        <!-- Hands-on Workshop 1 -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Workshop 1: 5-Minute Website</h2>
+            <div class="content-box text-2xl space-y-4">
+                <p><strong>Goal:</strong> Build a cool, simple website about any topic you want.</p>
+                <ol class="text-xl space-y-2 mt-2 list-decimal list-inside">
+                    <li><strong>Brainstorm (1 min):</strong> If you're stuck for ideas, ask your AI to generate some and "dance" with it until you find one you like.</li>
+                    <li><strong>Build (4 mins):</strong> Ask the AI to generate the HTML, CSS, and JavaScript.</li>
+                    <li><strong>Serve:</strong> Use Python's built-in web server (`python -m http.server`) or another language of your choice to serve the site locally.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Hands-on Workshop 2 -->
+        <div class="slide">
+            <h2 class="text-5xl font-bold gradient-text mb-8" contenteditable="true">Workshop 2: The Co-Developer</h2>
+             <div class="content-box text-2xl space-y-4">
+                <p><strong>Goal:</strong> Tackle a more complex, multi-file task together.</p>
+                <p class="mt-4">We will brainstorm a feature for an existing codebase. I will drive, and you can follow along on your own machine, tackling the same problem or a similar one. We will apply the structured workflow we just learned to build and test the feature safely and efficiently.</p>
+            </div>
+        </div>
+
         <!-- Navigation Controls -->
         <div class="navigation">
             <div class="nav-button" id="prev">←</div>
-            <div class="slide-counter">1 / 24</div>
+            <div class="slide-counter">1 / 26</div>
             <div class="nav-button" id="next">→</div>
             <div class="nav-button" id="fullscreen">⛶</div>
         </div>

@@ -69,11 +69,13 @@
 
 ---
 
-### **Slide 8: Live Demo: My Cursor Settings**
--   **Title:** Live Demo: My Cursor Settings
+### **Slide 8: Live Demo: Cursor Deep Dive**
+-   **Title:** Live Demo: Cursor Deep Dive
 -   **Content:**
-    -   Now, I'll walk you through my personal Cursor configuration, including my global rules and how I tailor them for different projects.
-    -   *(This is your cue to open your Cursor settings and share your screen.)*
+    -   Now, I'll walk you through my personal setup and workflow:
+        -   **Cursor Settings:** How I configure the IDE itself for maximum efficiency.
+        -   **Environment & Shortcuts:** Useful configurations in my shell and key shortcuts I use daily.
+        -   **My `.cursorrules` in Action:** A look at my global rules and how I use the `rule_templates` to switch personas for different tasks.
 
 ---
 
@@ -230,4 +232,23 @@
 
 ### **Slide 24: Q&A**
 -   **Title:** Discussion & Questions
--   **Content:** Q&A 
+-   **Content:** Q&A
+
+---
+
+### **Slide 25: Workshop 1: 5-Minute Website**
+-   **Title:** Workshop 1: 5-Minute Website
+-   **Content:**
+    -   **Goal:** Build a cool, simple website about any topic you want.
+    -   **Steps:**
+        1.  **Brainstorm (1 min):** If you're stuck for ideas, ask your AI to generate some and "dance" with it until you find one you like.
+        2.  **Build (4 mins):** Ask the AI to generate the HTML, CSS, and JavaScript.
+        3.  **Serve:** Use Python's built-in web server (`python -m http.server`) or another language of your choice to serve the site locally.
+
+---
+
+### **Slide 26: Workshop 2: The Co-Developer**
+-   **Title:** Workshop 2: The Co-Developer
+-   **Content:**
+    -   **Goal:** Tackle a more complex, multi-file task together.
+    -   We will brainstorm a feature for an existing codebase. I will drive, and you can follow along on your own machine, tackling the same problem or a similar one. We will apply the structured workflow we just learned to build and test the feature safely and efficiently. 
